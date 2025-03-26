@@ -29,6 +29,7 @@ int main() {
     int qtpt_1; // Quantidade de Pontos Turísticos da Cidade
     float dens_1; // Densidade Populacional (População / Área)
     float pipc_1; // PIB per Capita (PIB / População)
+    float poder_1; // Superpoder da Carta
     
     // Segunda carta
     char estado_2; // Estado
@@ -40,6 +41,7 @@ int main() {
     int qtpt_2; // Quantidade de Pontos Turísticos da Cidade
     float dens_2; // Densidade Populacional (População / Área)
     float pipc_2; // PIB per Capita (PIB / População)
+    float poder_2; // Superpoder da Carta
 
     // Obtendo os dados da primeira carta
     printf("=== Carta 1 ===\n\n");
@@ -68,6 +70,10 @@ int main() {
     // Aqui, populacao_1 é convertido implícitamente para float
     dens_1 = populacao_1 / area_1; // Densidade Populacional
     pipc_1 = pib_1 / populacao_1; // PIB per Capita
+
+    // Calculando o superpoder
+    poder_1 = (float) populacao_1 + area_1 + pib_1 + qtpt_1 + pipc_1;
+    poder_1 += (1 / dens_1);
 
     // Limpar entrada de dados, porque a Estácio esqueceu disso
     // Se tirar essas linhas, ele pula o próximo fgets
@@ -102,6 +108,10 @@ int main() {
     dens_2 = populacao_2 / area_2; // Densidade Populacional
     pipc_2 = pib_2 / populacao_2; // PIB per Capita
 
+    // Calculando o superpoder
+    poder_2 = (float) populacao_2 + area_2 + pib_2 + qtpt_2 + pipc_2;
+    poder_2 += (1 / dens_2);
+
     printf("\nCarta 1:\n");
     printf("Estado: %c\n", estado_1);
     printf("Codigo: %s\n", codigo_1);
@@ -112,6 +122,7 @@ int main() {
     printf("Pontos Turisticos: %i\n\n", qtpt_1);
     printf("Densidade Populacional: %.2f\n", dens_1);
     printf("PIB per Capita: %.2f\n\n", pipc_1);
+    printf("Superpoder: %.2f\n\n", poder_1);
 
     printf("Carta 2:\n");
     printf("Estado: %c\n", estado_2);
@@ -123,6 +134,7 @@ int main() {
     printf("Pontos Turisticos: %i\n\n", qtpt_2);
     printf("Densidade Populacional: %.2f\n", dens_2);
     printf("PIB per Capita: %.2f\n\n", pipc_2);
+    printf("Superpoder: %.2f\n\n", poder_2);
 
     return 0;
 }

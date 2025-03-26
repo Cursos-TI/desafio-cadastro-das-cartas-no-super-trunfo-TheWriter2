@@ -27,6 +27,8 @@ int main() {
     float area_1; // Área da Cidade em Km²
     float pib_1; // PIB da Cidade
     int qtpt_1; // Quantidade de Pontos Turísticos da Cidade
+    float dens_1; // Densidade Populacional (População / Área)
+    float pipc_1; // PIB per Capita (PIB / População)
     
     // Segunda carta
     char estado_2; // Estado
@@ -36,6 +38,8 @@ int main() {
     float area_2; // Área da Cidade em Km²
     float pib_2; // PIB da Cidade
     int qtpt_2; // Quantidade de Pontos Turísticos da Cidade
+    float dens_2; // Densidade Populacional (População / Área)
+    float pipc_2; // PIB per Capita (PIB / População)
 
     // Obtendo os dados da primeira carta
     printf("=== Carta 1 ===\n\n");
@@ -59,6 +63,11 @@ int main() {
     scanf("%i", &qtpt_1); // Quantidade de pontos turísticos da cidade
     printf("Digite a Area da Cidade: ");
     scanf("%f", &area_1); // Área da cidade
+
+    // Calculando a Densidade Populacional e o PIB per Capita
+    // Aqui, populacao_1 é convertido implícitamente para float
+    dens_1 = populacao_1 / area_1; // Densidade Populacional
+    pipc_1 = pib_1 / populacao_1; // PIB per Capita
 
     // Limpar entrada de dados, porque a Estácio esqueceu disso
     // Se tirar essas linhas, ele pula o próximo fgets
@@ -88,6 +97,11 @@ int main() {
     printf("Digite a Area da Cidade: ");
     scanf("%f", &area_2); // Área da cidade
 
+    // Calculando a Densidade Populacional e o PIB per Capita
+    // Aqui, populacao_2 é convertido implícitamente para float
+    dens_2 = populacao_2 / area_2; // Densidade Populacional
+    pipc_2 = pib_2 / populacao_2; // PIB per Capita
+
     printf("\nCarta 1:\n");
     printf("Estado: %c\n", estado_1);
     printf("Codigo: %s\n", codigo_1);
@@ -96,6 +110,8 @@ int main() {
     printf("Area: %.2f\n", area_1);
     printf("PIB: %.2f\n", pib_1);
     printf("Pontos Turisticos: %i\n\n", qtpt_1);
+    printf("Densidade Populacional: %.2f\n", dens_1);
+    printf("PIB per Capita: %.2f\n\n", pipc_1);
 
     printf("Carta 2:\n");
     printf("Estado: %c\n", estado_2);
@@ -105,6 +121,8 @@ int main() {
     printf("Area: %.2f\n", area_2);
     printf("PIB: %.2f\n", pib_2);
     printf("Pontos Turisticos: %i\n\n", qtpt_2);
+    printf("Densidade Populacional: %.2f\n", dens_2);
+    printf("PIB per Capita: %.2f\n\n", pipc_2);
 
     return 0;
 }

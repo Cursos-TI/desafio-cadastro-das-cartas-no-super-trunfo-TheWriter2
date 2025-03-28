@@ -119,7 +119,7 @@ int main() {
     printf("Populacao: %i\n", populacao_1);
     printf("Area: %.2f\n", area_1);
     printf("PIB: %.2f\n", pib_1);
-    printf("Pontos Turisticos: %i\n\n", qtpt_1);
+    printf("Pontos Turisticos: %i\n", qtpt_1);
     printf("Densidade Populacional: %.2f\n", dens_1);
     printf("PIB per Capita: %.2f\n\n", pipc_1);
     printf("Superpoder: %.2f\n\n", poder_1);
@@ -131,10 +131,19 @@ int main() {
     printf("Populacao: %i\n", populacao_2);
     printf("Area: %.2f\n", area_2);
     printf("PIB: %.2f\n", pib_2);
-    printf("Pontos Turisticos: %i\n\n", qtpt_2);
+    printf("Pontos Turisticos: %i\n", qtpt_2);
     printf("Densidade Populacional: %.2f\n", dens_2);
     printf("PIB per Capita: %.2f\n\n", pipc_2);
     printf("Superpoder: %.2f\n\n", poder_2);
+
+    printf("\nComparacao:\n");
+    printf("Populacao: %i\n", populacao_1 > populacao_2);
+    printf("Area: %i\n", area_1 > area_2);
+    printf("PIB: %i\n", pib_1 > pib_2);
+    printf("Pontos Turisticos: %i\n", qtpt_1 > qtpt_2);
+    printf("Densidade Populacional: %i\n", dens_1 < dens_2);
+    printf("PIB per Capita: %i\n", pipc_1 > pipc_2);
+    printf("Superpoder: %i\n", poder_1 > poder_2);
 
     return 0;
 }
